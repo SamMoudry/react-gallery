@@ -6,10 +6,7 @@ import GalleryList from '../GalleryList/GalleryList.jsx';
 
 function App() {
 
-const [galleryList, setGalleryList] = useState([]);
-
-
-
+  const [galleryList, setGalleryList] = useState([]);
 
   const getGallery = () => {
     axios.get('/gallery')
@@ -22,6 +19,10 @@ const [galleryList, setGalleryList] = useState([]);
         alert('Sorry, could not get gallery data. Try again later.');
       })
   }
+
+  useEffect (() => {
+    getGallery();
+  }, [])
 
 
 

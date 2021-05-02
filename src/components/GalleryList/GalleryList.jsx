@@ -1,9 +1,17 @@
-
+import GalleryItem from '../GalleryItem/GalleryItem.jsx';
 
 function GalleryList(props) {
     console.log('Props are', props);
+    let array =  props.list;
     return(
-        <div>Hello from GalleryList</div>
+        <>
+        { props.list.map(gallery => 
+                (<GalleryItem key={gallery.id} 
+                    path={gallery.path} 
+                    description={gallery.description} 
+                    likes={gallery.likes}/>)
+            )}
+        </>
     );
 }
 
