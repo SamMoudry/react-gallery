@@ -38,7 +38,7 @@ To practice passing values through `props` in React, you will build the gallery 
 ![mockup one](wireframes/first-mockup.png)
 
 ![mockup two](wireframes/second-mockup.png)
-
+  
 ### Task List
 - Use `axios` to retrieve (`GET`) data from to `/gallery` and store it in `App.jsx`.
 - Create a new **component** for the `GalleryList` and pass it the gallery data stored in `App` via `props`.
