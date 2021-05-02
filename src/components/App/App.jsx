@@ -11,7 +11,6 @@ function App() {
   const getGallery = () => {
     axios.get('/gallery')
       .then( response => {
-        console.log(response.data);
         setGalleryList(response.data);
       })
       .catch( error => {
