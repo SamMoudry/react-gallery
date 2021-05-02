@@ -1,0 +1,30 @@
+
+img {
+    width: 150px;
+  }
+
+.picture {
+    display: inline-block;
+    padding-left: 10px;
+}
+
+.descriptionImage {
+    opacity: 0.3;
+}
+
+.container .descriptionText {
+    font-size: 10px;
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 40%; 
+    text-align: center;
+    width: 60%; 
+}
+
+.container {
+    position: relative;
+    display: inline-block;
+}

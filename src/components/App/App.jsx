@@ -19,12 +19,19 @@ function App() {
       })
   }
 
+  const putGallery = function (id) {
+    axios.put('/gallery/like/' + id)
+    .then( response => {
+      getGallery();
+    })
+    .catch(function (error) {
+      console.log('Error on put:', error);
+    });
+  }
+
   useEffect (() => {
     getGallery();
   }, [])
-
-
-
 
     return (
       <div className="App">
@@ -32,7 +39,7 @@ function App() {
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
         
-        <GalleryList list={galleryList}/>
+        <GalleryList list={galleryList} putGallery={putGallery}/>
       </div>
     );
 }
